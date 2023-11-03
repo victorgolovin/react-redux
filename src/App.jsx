@@ -13,6 +13,7 @@ const App = () => {
       <p>
         {counter}
       </p>
+      <div></div>
     </div>
   )
 }
