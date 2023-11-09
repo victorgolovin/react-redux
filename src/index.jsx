@@ -2,14 +2,15 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import { createStore } from 'redux'
-import { counterReducer } from './reducer.js'
 import { Provider } from 'react-redux'
+import { composeWithDevTools } from 'redux-devtools-extension' // взял с https://redux.js.org/usage/configuring-your-store раздел Integrating the devtools extension
+import { counterReducer } from './reducer.js'
 import './index.css'
 
 
 
 
-const store = createStore(counterReducer) // В createStore прокидываем наш reducer
+const store = createStore(counterReducer, undefined, composeWithDevTools()) // В createStore прокидываем наш reducer
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
