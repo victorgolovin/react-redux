@@ -1,0 +1,1 @@
+export const getCounter = state => state.counter.value; // Selector нам нужен чтобы в себя принимать state и из этого state возвращать value (данные)

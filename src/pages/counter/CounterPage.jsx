@@ -4,10 +4,10 @@ import {
   decrement
 } from './actions'
 import { getCounter } from "./selectors";
-import { CounterWidget } from "./components/CounterWidget/CounterWidget";
+import { CounterWidget } from "../../components/CounterWidget/CounterWidget";
 
 
-const App = () => { // умный компонент который все связывает
+const CounterPage = () => { // умный компонент который все связывает
   const counter = useSelector(getCounter); // useSelector() позволяет нам получить информацию из store, но внутри него нам нужно передать функцию getCounterSelector
   const dispath = useDispatch(); // хук useDispatch() позволяет нам сгенерировать action
 
@@ -30,4 +30,4 @@ const App = () => { // умный компонент который все св�
   
 }
 
-export default App
+export default CounterPage
